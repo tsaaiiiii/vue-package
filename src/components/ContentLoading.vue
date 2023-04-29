@@ -18,7 +18,7 @@
     </div>
   </div>
   <div v-if="isShow" class="storyShow">
-    <img src="@/images/cat.jpeg" alt="" />
+    <img src="public/images/cat.jpeg" alt="" />
     <div class="storySend">
       <input type="text" placeholder="發送訊息" />
       <button class="storyButton">
@@ -39,16 +39,16 @@ export default {
       fullPage: true,
       story: [
         {
-          img: '/src/images/landscape.jpeg',
+          img: 'public/images/landscape.jpeg',
           title: 'LandScape'
         },
-        { img: '/src/images/camping.jpeg', title: 'Camping' },
-        { img: '/src/images/food.jpeg', title: 'Food' },
-        { img: '/src/images/drinks.png', title: 'Cafe' },
-        { img: '/src/images/books.jpg', title: 'Book' },
-        { img: '/src/images/makeup.jpg', title: 'makeup' },
-        { img: '/src/images/airplane.jpg', title: 'GoAboard' },
-        { img: '/src/images/music.jpg', title: 'Music' }
+        { img: 'public/images/camping.jpeg', title: 'Camping' },
+        { img: 'public/images/food.jpeg', title: 'Food' },
+        { img: 'public/images/drinks.png', title: 'Cafe' },
+        { img: 'public/images/books.jpg', title: 'Book' },
+        { img: 'public/images/makeup.jpg', title: 'makeup' },
+        { img: 'public/images/airplane.jpg', title: 'GoAboard' },
+        { img: 'public/images/music.jpg', title: 'Music' }
       ],
       isShow: false
     }

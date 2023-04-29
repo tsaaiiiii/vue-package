@@ -8,7 +8,7 @@
       <div class="postcontent" v-for="(item, index) in photo" :key="index">
         <div class="postTitle">
           <div class="myPic">
-            <img src="../images/cat.jpeg" alt="" />
+            <img src="public/images/cat.jpeg" alt="" />
           </div>
           <h4>Yvoo_eeeee</h4>
         </div>
@@ -80,13 +80,13 @@ export default {
     return {
       photo: [
         {
-          img: '/src/images/post1.jpg'
+          img: 'public/images/post1.jpg'
         },
         {
-          img: '/src/images/post4.png'
+          img: 'public/images/post4.png'
         },
         {
-          img: '/src/images/post3.png'
+          img: 'public/images/post3.png'
         }
       ]
     }

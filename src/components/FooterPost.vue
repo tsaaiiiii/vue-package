@@ -8,12 +8,12 @@
       <div class="postcontent" v-for="(item, index) in photo" :key="index">
         <div class="postTitle">
           <div class="myPic">
-            <img src="public/images/cat.jpeg" alt="" />
+            <img src="@/assets/images/cat.jpeg" alt="" />
           </div>
           <h4>Yvoo_eeeee</h4>
         </div>
         <div class="postImg">
-          <img :src="item.img" alt="" />
+          <img :src="imagePaths[item.img]" alt="" />
         </div>
         <div class="postIcons">
           <div class="postIconsLeft">
@@ -31,6 +31,9 @@
 </template>
 
 <script>
+import post1 from '@/assets/images/post1.jpg'
+import post2 from '@/assets/images/post2.png'
+import post3 from '@/assets/images/post3.png'
 export default {
   methods: {
     favoriteAlert() {
@@ -78,15 +81,20 @@ export default {
   },
   data() {
     return {
+      imagePaths: {
+        'post1.jpg': post1,
+        'post2.png': post2,
+        'post3.png': post3
+      },
       photo: [
         {
-          img: 'public/images/post1.jpg'
+          img: 'post1.jpg'
         },
         {
-          img: 'public/images/post4.png'
+          img: 'post2.png'
         },
         {
-          img: 'public/images/post3.png'
+          img: 'post3.png'
         }
       ]
     }

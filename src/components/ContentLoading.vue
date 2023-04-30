@@ -11,14 +11,14 @@
     <div class="storyAll" v-for="(item, index) in story" :key="index">
       <div class="story">
         <div class="storyOutline" @click.prevent="doAjax">
-          <img :src="item.img" alt="" />
+          <img :src="imagePaths[item.img]" alt="" />
         </div>
         <h3>{{ item.title }}</h3>
       </div>
     </div>
   </div>
   <div v-if="isShow" class="storyShow">
-    <img src="public/images/cat.jpeg" alt="" />
+    <img src="@/assets/images/cat.jpeg" alt="" />
     <div class="storySend">
       <input type="text" placeholder="發送訊息" />
       <button class="storyButton">
@@ -32,6 +32,14 @@
 <script>
 import Loading from 'vue3-loading-overlay/dist/index'
 import 'vue3-loading-overlay/dist/vue3-loading-overlay.css'
+import landscapeImg from '@/assets/images/landscape.jpeg'
+import campingImg from '@/assets/images/camping.jpeg'
+import foodImg from '@/assets/images/food.jpeg'
+import drinksImg from '@/assets/images/drinks.png'
+import booksImg from '@/assets/images/books.jpg'
+import makeupImg from '@/assets/images/makeup.jpg'
+import airplaneImg from '@/assets/images/airplane.jpg'
+import musicImg from '@/assets/images/music.jpg'
 export default {
   data() {
     return {
@@ -39,18 +47,28 @@ export default {
       fullPage: true,
       story: [
         {
-          img: 'public/images/landscape.jpeg',
+          img: 'landscape.jpeg',
           title: 'LandScape'
         },
-        { img: 'public/images/camping.jpeg', title: 'Camping' },
-        { img: 'public/images/food.jpeg', title: 'Food' },
-        { img: 'public/images/drinks.png', title: 'Cafe' },
-        { img: 'public/images/books.jpg', title: 'Book' },
-        { img: 'public/images/makeup.jpg', title: 'makeup' },
-        { img: 'public/images/airplane.jpg', title: 'GoAboard' },
-        { img: 'public/images/music.jpg', title: 'Music' }
+        { img: 'camping.jpeg', title: 'Camping' },
+        { img: 'food.jpeg', title: 'Food' },
+        { img: 'drinks.png', title: 'Cafe' },
+        { img: 'books.jpg', title: 'Book' },
+        { img: 'makeup.jpg', title: 'makeup' },
+        { img: 'airplane.jpg', title: 'GoAboard' },
+        { img: 'music.jpg', title: 'Music' }
       ],
-      isShow: false
+      isShow: false,
+      imagePaths: {
+        'landscape.jpeg': landscapeImg,
+        'camping.jpeg': campingImg,
+        'food.jpeg': foodImg,
+        'drinks.png': drinksImg,
+        'books.jpg': booksImg,
+        'makeup.jpg': makeupImg,
+        'airplane.jpg': airplaneImg,
+        'music.jpg': musicImg
+      }
     }
   },
   components: {

@@ -1,7 +1,7 @@
 <template>
   <div class="socialInfo">
     <div class="personalImg">
-      <img src="public/images/cat.jpeg" alt="" />
+      <img src="@/assets/images/cat.jpeg" alt="" />
     </div>
     <div class="socialPost">
       <div class="openData">
